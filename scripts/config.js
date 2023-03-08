@@ -227,6 +227,7 @@ const builds = {
 
 function genConfig(name) {
   const opts = builds[name]
+  // ques isTargetingBrowser
   const isTargetingBrowser = !(
     opts.transpile === false || opts.format === 'cjs'
   )
@@ -289,6 +290,7 @@ function genConfig(name) {
   vars.preventAssignment = true
   config.plugins.push(replace(vars))
 
+  // ques _name
   Object.defineProperty(config, '_name', {
     enumerable: false,
     value: name
