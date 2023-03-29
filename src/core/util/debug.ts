@@ -8,7 +8,7 @@ export let warn: (msg: string, vm?: Component | null) => void = noop
 export let tip = noop
 export let generateComponentTrace: (vm: Component) => string // work around flow check
 export let formatComponentName: (vm: Component, includeFile?: false) => string
-
+/* @study 错误处理 */
 if (__DEV__) {
   const hasConsole = typeof console !== 'undefined'
   const classifyRE = /(?:^|[-_])(\w)/g
