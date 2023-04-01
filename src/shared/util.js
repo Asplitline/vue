@@ -96,6 +96,7 @@ export function toNumber(val: string): number | string {
 }
 
 /**
+ * @mark makeMap
  * Make a map and return a function for checking if a key
  * is in that map.
  */

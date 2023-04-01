@@ -330,6 +330,7 @@ function normalizeProps (options: Object, vm: ?Component) {
 }
 
 /**
+ * @mark normalizeInject
  * Normalize all injections into Object-based format
  */
 function normalizeInject (options: Object, vm: ?Component) {
@@ -357,6 +358,7 @@ function normalizeInject (options: Object, vm: ?Component) {
 }
 
 /**
+ * @mark normalizeDirectives
  * Normalize raw function directives into object format.
  */
 function normalizeDirectives (options: Object) {
@@ -427,6 +429,7 @@ export function mergeOptions (
       mergeField(key)
     }
   }
+  /* @mark mergeField */
   function mergeField (key) {
     const strat = strats[key] || defaultStrat
     options[key] = strat(parent[key], child[key], vm, key)
